@@ -61,7 +61,7 @@ class DLataset(tf.data.Dataset):
         """Applies some default options for performance."""
         options = tf.data.Options()
         options.autotune.enabled = True
-        options.deterministic = False
+        options.deterministic = True
         options.experimental_optimization.apply_default_optimizations = True
         options.experimental_optimization.map_fusion = True
         options.experimental_optimization.map_and_filter_fusion = True
